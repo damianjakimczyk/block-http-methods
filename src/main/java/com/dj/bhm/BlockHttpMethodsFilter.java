@@ -4,8 +4,6 @@ import static java.util.Arrays.asList;
 import static javax.servlet.http.HttpServletResponse.SC_FORBIDDEN;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
