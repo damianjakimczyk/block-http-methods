@@ -13,7 +13,7 @@ public class MyServlet extends HttpServlet {
 	private String message;
 
 	public void init() throws ServletException {
-	      message = "Hello World MyServlet";
+	      message = "Hello World MyServlet hahaha";
 	   }
 
 	/**
