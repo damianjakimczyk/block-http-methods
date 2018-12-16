@@ -26,8 +26,8 @@ public class IndexFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		System.out.println("Index Filter");
-		 if (((request.getPathInfo() != null && request.getPathInfo().equals("/")) || request.getServletPath().equals("/")) 
-				&& !request.getMethod().equals("OPTIONS")) {
+		 if ((request.getRequestURI().equals(request.getContextPath()) || request.getRequestURI().equals(request.getContextPath() + "/") ) 
+				&& request.getMethod().equals("GET")) {
 			System.out.println("send redirect ");
 			response.sendRedirect(request.getContextPath() + "/" + indexPageParam);
 		} else {
